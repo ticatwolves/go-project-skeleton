@@ -4,7 +4,7 @@ project_name: shrinkit
 before:
   hooks:
     - dir: ./src
-      go mod tidy
+      cmd: go mod tidy
 builds:
   - main: ./src/cmd/main.go
     env:
