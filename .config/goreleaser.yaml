@@ -1,0 +1,22 @@
+version: 2
+project_name: shrinkit
+
+before:
+  hooks:
+    - dir: ./src
+      go mod tidy
+builds:
+  - main: ./src/cmd/main.go
+    env:
+      - CGO_ENABLED=0
+    goos:
+      - linux
+      - windows
+      - darwin
+    goarch:
+      - amd64
+      - arm64
+release:
+  github:
+    owner: ticatwolves
+    name: go-project-skeleton
