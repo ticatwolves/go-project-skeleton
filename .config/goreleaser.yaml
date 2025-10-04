@@ -3,9 +3,9 @@ project_name: shrinkit
 
 before:
   hooks:
-    - cd ./src && go mod tidy && cd ..
+    - go mod tidy
 builds:
-  - main: ./src/cmd/main.go
+  - main: ./cmd/main.go
     env:
       - CGO_ENABLED=0
     goos:
