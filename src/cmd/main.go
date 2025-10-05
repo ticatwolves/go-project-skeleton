@@ -14,5 +14,6 @@ func SumOfTwoNumber(a int, b int) int {
 
 func main() {
 	// Entry Point just prinitng the value return from SumOfTwoNumber
+
 	fmt.Println(SumOfTwoNumber(1, 2))
 }
